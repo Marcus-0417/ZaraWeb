@@ -45,6 +45,7 @@
   margin: 0 10px;
 }
 .list .item .clip {
+  display: block;
   clip-path: circle(50%);
 }
 .list .item h3 {
