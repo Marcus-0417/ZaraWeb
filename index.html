@@ -16,7 +16,8 @@
 
 <body>
     <!-- 換圖輪播 -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="1000">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover"
+        data-bs-interval="1000">
         <!-- 張數提示器 -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -71,6 +72,68 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!-- 主要內容區 -->
+    <main class="container">
+        <!-- 最新消息區 -->
+        <section id="news">
+            <header class="heading">
+                <h2>最新消息</h2>
+            </header>
+            <div class="list">
+                <!-- 遮色片設定在要被遮蓋範圍的容器中 -->
+                <div class="item mask mask-1">
+                    <a href="#">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/new1.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="item mask mask-2">
+                    <a href="#">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/new2.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="item mask mask-3">
+                    <a href="#">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/new3.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 熱門商品區 -->
+        <section id="hot">
+            <header class="heading">
+                <h2>熱門商品</h2>
+            </header>
+
+            <!-- 縮寫div.list>div.item*3>a[href='#']>h3{TITLE NAME}+img[src='./images/hot$.jpg'] -->
+            <div class="list">
+                <div class="item">
+                    <a href="#" class="clip">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/hot1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="clip">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/hot2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="clip">
+                        <h3>TITLE NAME</h3>
+                        <img src="./images/hot3.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+    </main>
 
 
     <!-- bootstrap js cdn -->

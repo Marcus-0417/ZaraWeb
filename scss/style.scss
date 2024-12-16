@@ -1,0 +1,121 @@
+@use './variables/' as *;
+@use './function/' as *;
+
+//bootstrap carousel
+.carousel {
+    .carousel-item {
+        height: 100vh;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
+/* 主要內容共用區 */
+
+/* 最新消息區 */
+.heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include bordered-l;
+    margin: $interval-heading;
+    padding-left: $interval-rem-l;
+
+    &::before {
+        // 偽元素是行內元素，本身不支援寬高，但因父元素有設定flex已改變子元素的型態
+        content: '';
+        position: absolute;
+        left: 10.2rem;
+        bottom: 8px;
+        width: calc(100% - 10.2rem);
+        height: 3px;
+        background-color: $deep;
+    }
+
+    &::after {
+        // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
+        content: '';
+        margin-left: $interval-rem-s;
+        font-weight: 600;
+    }
+
+    h2 {
+        margin: 0.2rem 0;
+        font-weight: 600;
+    }
+}
+
+.list {
+    display: flex;
+
+    .item {
+        position: relative;
+        flex: 1;
+        margin: 0 10px;
+
+        .clip{
+            clip-path: circle(50%);
+        }
+
+        h3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $alpha-b-65;
+            color: $light;
+            opacity: 0;
+            transition: $speed-fast;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .mask {
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+    }
+
+    .mask-1 {
+        mask-image: url(../images/blobs-1.svg);
+    }
+
+    .mask-2 {
+        mask-image: url(../images/blobs-2.svg);
+    }
+
+    .mask-3 {
+        mask-image: url(../images/blobs-3.svg);
+    }
+}
+
+/* 英文標題區 */
+#news {
+    .heading {
+        &::after {
+            // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
+            content: 'NEWS';
+        }
+    }
+}
+#hot {
+    .heading {
+        &::after {
+            // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
+            content: 'HOT';
+        }
+    }
+}
