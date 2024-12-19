@@ -4,7 +4,7 @@
 //bootstrap carousel
 .carousel {
     .carousel-item {
-        height: 100vh;
+        height: calc(100vh - 65px); //不同單位運算用 => calc()記得運算符號前後要加空格
 
         img {
             object-fit: cover;
@@ -13,8 +13,40 @@
     }
 }
 
-/* 主要內容共用區 */
+/* bootstrap navbar */
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: $z-index-l;
+    height: 65px;
 
+    .navbar-brand{
+        img{
+            height: 40px;
+        }
+    }
+    .btn-w{
+        width: 5rem;
+    }
+    .icon{
+        list-style: none;
+        display: flex;
+        margin: 0 0 0 30px;
+
+        a{
+            margin: 0 0.5rem;
+            color: $light;
+            font-size: $font-size-xl;
+
+            &:hover{
+                color: #63E6BE;
+            }
+        }
+    }
+}
+
+/* 主要內容共用區 */
 /* 最新消息區 */
 .heading {
     position: relative;
@@ -57,9 +89,12 @@
         flex: 1;
         margin: 0 10px;
 
-        .clip{
+        /* 剪裁遮色片 */
+        .clip {
             display: block;
-            clip-path: circle(50%);
+            clip-path: circle(50% at 50% 50%);
+            // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            // clip-path: ellipse(25% 40% at 50% 50%);
         }
 
         h3 {
@@ -103,8 +138,10 @@
     }
 }
 
+
 /* 英文標題區 */
 #news {
+    padding-top: 65px;
     .heading {
         &::after {
             // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
@@ -112,11 +149,29 @@
         }
     }
 }
+
 #hot {
+    padding-top: 65px;
     .heading {
         &::after {
             // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
             content: 'HOT';
         }
     }
+}
+
+#women{
+    .heading {
+        &::after {
+            // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
+            content: 'ALL';
+        }
+    }
+}
+
+/* 頁尾區 */
+footer {
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
 }

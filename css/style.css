@@ -1,10 +1,38 @@
 @charset "UTF-8";
 .carousel .carousel-item {
-  height: 100vh;
+  height: calc(100vh - 65px);
 }
 .carousel .carousel-item img {
   object-fit: cover;
   height: 100%;
+}
+
+/* bootstrap navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 65px;
+}
+.navbar .navbar-brand img {
+  height: 40px;
+}
+.navbar .btn-w {
+  width: 5rem;
+}
+.navbar .icon {
+  list-style: none;
+  display: flex;
+  margin: 0 0 0 30px;
+}
+.navbar .icon a {
+  margin: 0 0.5rem;
+  color: #f1f1f1;
+  font-size: 1.4rem;
+}
+.navbar .icon a:hover {
+  color: #63E6BE;
 }
 
 /* 主要內容共用區 */
@@ -43,10 +71,11 @@
   position: relative;
   flex: 1;
   margin: 0 10px;
+  /* 剪裁遮色片 */
 }
 .list .item .clip {
   display: block;
-  clip-path: circle(50%);
+  clip-path: circle(50% at 50% 50%);
 }
 .list .item h3 {
   position: absolute;
@@ -82,10 +111,27 @@
 }
 
 /* 英文標題區 */
+#news {
+  padding-top: 65px;
+}
 #news .heading::after {
   content: "NEWS";
 }
 
+#hot {
+  padding-top: 65px;
+}
 #hot .heading::after {
   content: "HOT";
+}
+
+#women .heading::after {
+  content: "ALL";
+}
+
+/* 頁尾區 */
+footer {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
