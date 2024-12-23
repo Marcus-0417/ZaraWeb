@@ -36,6 +36,11 @@
 }
 
 /* 主要內容共用區 */
+img {
+  display: block;
+  width: 100%;
+}
+
 /* 最新消息區 */
 .heading {
   position: relative;
@@ -92,10 +97,6 @@
 .list .item h3:hover {
   opacity: 1;
 }
-.list .item img {
-  display: block;
-  width: 100%;
-}
 .list .mask {
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
@@ -127,6 +128,56 @@
 
 #women .heading::after {
   content: "ALL";
+}
+#women .content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+#women .content p {
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  color: #8f6b6d;
+  font-weight: 700;
+}
+#women .content p del {
+  font-size: 0.8rem;
+  color: #444;
+  padding-right: 0.65rem;
+}
+
+/* 商品詳情頁 */
+#productPage .heading::before {
+  content: "";
+  display: none;
+}
+#productPage .product-row {
+  display: flex;
+}
+#productPage .product-row > div {
+  flex: 1;
+  margin: 48px;
+}
+#productPage .product-row #tabs .photo {
+  padding: 0;
+}
+#productPage .product-row #tabs ul {
+  display: flex;
+}
+
+/* jQuery UI */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border: 1px solid #444;
+  background: transparent;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 0;
 }
 
 /* 頁尾區 */

@@ -14,32 +14,34 @@
 }
 
 /* bootstrap navbar */
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
     left: 0;
     z-index: $z-index-l;
     height: 65px;
 
-    .navbar-brand{
-        img{
+    .navbar-brand {
+        img {
             height: 40px;
         }
     }
-    .btn-w{
+
+    .btn-w {
         width: 5rem;
     }
-    .icon{
+
+    .icon {
         list-style: none;
         display: flex;
         margin: 0 0 0 30px;
 
-        a{
+        a {
             margin: 0 0.5rem;
             color: $light;
             font-size: $font-size-xl;
 
-            &:hover{
+            &:hover {
                 color: #63E6BE;
             }
         }
@@ -47,6 +49,11 @@
 }
 
 /* 主要內容共用區 */
+img {
+    display: block;
+    width: 100%;
+}
+
 /* 最新消息區 */
 .heading {
     position: relative;
@@ -114,10 +121,6 @@
             }
         }
 
-        img {
-            display: block;
-            width: 100%;
-        }
     }
 
     .mask {
@@ -142,6 +145,7 @@
 /* 英文標題區 */
 #news {
     padding-top: 65px;
+
     .heading {
         &::after {
             // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
@@ -152,6 +156,7 @@
 
 #hot {
     padding-top: 65px;
+
     .heading {
         &::after {
             // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
@@ -160,13 +165,80 @@
     }
 }
 
-#women{
+#women {
     .heading {
         &::after {
             // &::before跟&::after => 一定要有content，當裝飾，不要放重要內容
             content: 'ALL';
         }
     }
+
+    .content {
+        h3 {
+            font-size: $font-size-l;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        p {
+            font-size: $font-size-s;
+            margin: 0.5rem 0;
+            color: $lesser-4;
+            font-weight: $font-weight-bold;
+
+            del {
+                font-size: $font-size-xs;
+                color: $deep;
+                padding-right: $interval-rem-s;
+            }
+        }
+    }
+}
+
+/* 商品詳情頁 */
+#productPage {
+    .heading {
+        &::before {
+            content: '';
+            display: none;
+        }
+    }
+
+    .product-row {
+        display: flex;
+
+        >div {
+            flex: 1;
+            margin: $interval-xxl;
+        }
+
+        #tabs {
+            .photo {
+                padding: 0;
+            }
+
+            ul {
+                display: flex;
+
+
+            }
+        }
+    }
+}
+
+/* jQuery UI */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    border: 1px solid $deep;
+    background: transparent;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0;
 }
 
 /* 頁尾區 */
