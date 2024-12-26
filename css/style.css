@@ -164,6 +164,27 @@ img {
 #productPage .product-row #tabs ul {
   display: flex;
 }
+#productPage .product-row .detail h2 {
+  display: inline-block;
+  font-weight: 700;
+  background-color: #444;
+  color: #f1f1f1;
+  padding: 10px;
+  box-shadow: 5px 5px 0 #23f444;
+  margin-bottom: 24px;
+}
+#productPage .product-row .detail data {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.85rem;
+}
+#productPage .product-row .detail mark {
+  background-color: #23f444;
+  margin-left: 10px;
+}
+#productPage .product-row .detail p {
+  margin: 16px 0;
+}
 
 /* jQuery UI */
 .ui-state-active,

@@ -20,6 +20,9 @@
     <!-- jQuery UI css CDN -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
+    <!-- lightbox css -->
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+
     <!-- 自訂的css放最下面 -->
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -99,7 +102,7 @@
         <section id="productPage">
             <!-- 產品名稱 -->
             <header class="heading">
-                <h2>ProductName</h2>
+                <h1>珍珠頸鏈</h1>
             </header>
             <!-- 產品規格區 -->
             <div class="product-row">
@@ -108,19 +111,35 @@
 
                     <!-- 頁籤內容 -->
                     <div id="tabs-1" class="photo">
-                        <img src="./images/accessories/thumbs/accessories1_s.jpg" alt="">
+                        <!-- 套用lightbox效果，data-lightbox此屬性是必須的，a標籤連結指定大圖 包住縮圖 -->
+                        <a href="./images/accessories/accessories1.jpg" data-lightbox="lightbox"
+                            data-title="accessories1" data-alt="accessories1">
+                            <img src="./images/accessories/thumbs/accessories1_s.jpg" alt="">
+                        </a>
                     </div>
                     <div id="tabs-2" class="photo">
-                        <img src="./images/accessories/thumbs/accessories2_s.jpg" alt="">
+                        <a href="./images/accessories/accessories2.jpg" data-lightbox="lightbox"
+                            data-title="accessories2" data-alt="accessories2">
+                            <img src="./images/accessories/thumbs/accessories2_s.jpg" alt="">
+                        </a>
                     </div>
                     <div id="tabs-3" class="photo">
-                        <img src="./images/accessories/thumbs/accessories3_s.jpg" alt="">
+                        <a href="./images/accessories/accessories3.jpg" data-lightbox="lightbox"
+                            data-title="accessories3" data-alt="accessories3">
+                            <img src="./images/accessories/thumbs/accessories3_s.jpg" alt="">
+                        </a>
                     </div>
                     <div id="tabs-4" class="photo">
-                        <img src="./images/accessories/thumbs/accessories4_s.jpg" alt="">
+                        <a href="./images/accessories/accessories4.jpg" data-lightbox="lightbox"
+                            data-title="accessories4" data-alt="accessories4">
+                            <img src="./images/accessories/thumbs/accessories4_s.jpg" alt="">
+                        </a>
                     </div>
                     <div id="tabs-5" class="photo">
-                        <img src="./images/accessories/thumbs/accessories5_s.jpg" alt="">
+                        <a href="./images/accessories/accessories5.jpg" data-lightbox="lightbox"
+                            data-title="accessories5" data-alt="accessories5">
+                            <img src="./images/accessories/thumbs/accessories5_s.jpg" alt="">
+                        </a>
                     </div>
 
                     <!-- 頁籤 -->
@@ -133,7 +152,31 @@
                     </ul>
                 </div>
                 <!-- 產品規格 -->
-                <div class="detail">右邊規格區Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, dolor dolore, doloremque, excepturi non impedit magni itaque maiores in est obcaecati modi veritatis asperiores debitis quod incidunt quos maxime temporibus!</div>
+                <div class="detail">
+                    <h2>珍珠頸鏈</h2>
+
+                    <data value="No. p01856163">多色 | 1856/163</data>
+
+                    <div class="price">
+                        <s>NT$ 1,490</s>
+                        <mark>-33% NT$ 990</mark>
+                    </div>
+
+                    <p>多層項鍊；搭配人造珍珠和彩色珠飾鑲飾；龍蝦扣固定。</p>
+
+                    <details>
+                        <summary>材質</summary>
+                        <pre>
+
+  75% 亞克力纖維
+  10% 鋅
+  5%  聚酯纖維
+  5%  鐵
+  5%  黃銅
+                    </pre>
+                    </details>
+
+                </div>
             </div>
             <!-- 產品內容排版區 -->
             <div class="product-content"></div>
@@ -153,6 +196,9 @@
 
     <!-- jQuery UI CDN -->
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <!-- jQuery lightbox js -->
+    <script src="./js/lightbox.min.js"></script>
 
     <!-- 自訂的js放最下面 -->
     <script src="./js/script.js"></script>

@@ -16,8 +16,11 @@ $(function () {
             $(this).attr('src', hoverSrc);
         });
 
-
     /* jQuery UI tabs */
     $("#tabs").tabs();
-    
 });
+
+/* lightbox修改選項，不須使用document ready */
+lightbox.option({
+    'wrapAround': true
+  })
